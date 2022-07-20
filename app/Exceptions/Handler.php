@@ -59,13 +59,13 @@ class Handler extends ExceptionHandler
      * @param  \Exception  $exception
      * @return void
      */
-    public function report(Exception $exception)
+    public function report(Exception $e)
     {
-        if ($this->shouldReport($exception) && App::environment(['production', 'staging'])) {
-            $airbrakeNotifier = \APP::make('Airbrake\Notifier');
-            $airbrakeNotifier->notify($exception);
+        if ($this->shouldReport($e)) {
+            $airbrakeNotifier = \App::make('Airbrake\Notifier');
+            $airbrakeNotifier->notify($e);
         }
 
-        parent::report($exception);
+        parent::report($e);
     }
 }
