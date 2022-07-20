@@ -2,8 +2,8 @@
 
 return [
 
-    'projectId'     => '436324',
-    'projectKey'    => '0f6c7366bfc8549c32edb0a905517d1a',
+    'projectId'     => '436351',
+    'projectKey'    => 'f5e2f6b2f81fd85bf6b980deec65d2c3',
     'environment'   => env('APP_ENV', 'production'),
 
     //leave the following options empty to use defaults
